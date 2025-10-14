@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(320deg, #f0f0f0, #c1c1c1);
+  min-height: 100vh;
+}
+
+main {
+  margin: 0 auto;
+}
+
+header {
+  margin: 0 auto;
+  width: 70vw;
+  text-align: center;
+  min-width: 400px;
+}
+header h1 {
+  margin: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px auto;
+  padding: 10px 10px 40px 10px;
+  max-width: 90vw;
+
+  border: 2px rgb(181, 180, 180) solid;
+  border-radius: 25px;
+}
+
+.content__item {
+  width: 90vw;
+  max-width: 1000px;
+  padding: 10px 20px;
+}
+.content__item h2 {
+  margin-bottom: 10px;
+}
+
+.content__item--group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content__block {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+
+  margin: 10px;
+  padding: 8px 15px 10px 25px;
+
+  position: relative;
+
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.gallery__container {
+  width: 90vw;
+  max-width: 1000px;
+  padding: 25px;
+  padding-bottom: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.gallery__img {
+  height: 100%;
+  max-width: 40%;
+}
+.gallery__title {
+  width: 50%;
+}
+
+.bottom-menu {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-radius: 20px;
+  height: 60px;
+  width: 70%;
+  max-width: 320px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 90;
+}
+
+.bottom-menu img {
+  width: 30px;
+}
+
+.bottom-menu a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+#home {
+  background: #d0f0fd;
+}
+#calendar {
+  background: #d0fdd6;
+}
+#delete {
+  background: #fdd0d0;
+}
+
+/* Media part */
+
+@media (min-width: 1100px) {
+  .content__item--group {
+    flex-direction: row;
+  }
+  .content__block {
+    width: 33%;
+  }
+  .gallery__title {
+    width: 70%;
+  }
+}
