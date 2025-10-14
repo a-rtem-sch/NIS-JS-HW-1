@@ -7,7 +7,7 @@ async function run() {
 
   const h1 = document.createElement('h1');
   h1.className = 'header__title';
-  h1.textContent = 'Превью виджета "Виджет для учебы и концентрации"';
+  h1.textContent = 'Превью виджета "Виджет для учебы и концентрации" Кстати, сайт сделан адаптивным!';
 
   const h4 = document.createElement('h4');
   h4.className = 'header__description';
