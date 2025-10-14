@@ -91,30 +91,29 @@ async function run() {
   }
 
   // GALLERY
-  const galleryWrapper = document.createElement('div');
+ const galleryWrapper = document.createElement('div');
   galleryWrapper.className = 'wrapper gallery__wrapper';
   galleryWrapper.id = 'gallery';
 
-  data.gallery.forEach(item => {
-    const galleryContainer = document.createElement('div');
-    galleryContainer.className = 'gallery__container';
+  const galleryContainer = document.createElement('div');
+  galleryContainer.className = 'gallery__container';
 
-    const img = document.createElement('img');
-    img.className = 'gallery__img';
-    img.src = item.image;
-    img.alt = item.title;
+  const img = document.createElement('img');
+  img.className = 'gallery__img';
+  img.src = data.gallery[0].image; // берем только первое фото
+  img.alt = '';
 
-    const galleryTitle = document.createElement('div');
-    galleryTitle.className = 'gallery__title';
-    const pGallery = document.createElement('p');
-    pGallery.textContent = item.title;
-    galleryTitle.appendChild(pGallery);
+  const galleryTitle = document.createElement('div');
+  galleryTitle.className = 'gallery__title';
+  const pGallery = document.createElement('p');
+  pGallery.textContent =
+    'Это - эскиз виджета, сделанный в программе DrawIo. В этом превью использована SVG-версия документа, в JSON есть и редактируемая .drawio версия';
+  galleryTitle.appendChild(pGallery);
 
-    galleryContainer.append(img, galleryTitle);
-    galleryWrapper.appendChild(galleryContainer);
-  });
-
+  galleryContainer.append(img, galleryTitle);
+  galleryWrapper.appendChild(galleryContainer);
   main.appendChild(galleryWrapper);
+
   body.appendChild(main);
 
   // BOTTOM MENU
